@@ -14,7 +14,11 @@ const TestForm = () => {
       username: "zz",
       password: ""
     },
-    onSubmit: values => console.log(values),
+    onSubmit: values => {
+      console.log(values);
+      formik.setValues({ username: "", password: "" });
+      formik.setTouched({});
+    },
     // validate: values => {
     //   //console.log(values);
     //   let errors = {};
